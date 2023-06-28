@@ -7,14 +7,6 @@
   padding-top: 70px;
 }
 
-#cards-title_dark {
-  color: var(--cards-title);
-}
-
-#cards-title_dark.active {
-  color: white;
-}
-
 .cards-title p {
   color: var(--black);
   margin-top: 20px;
@@ -29,7 +21,56 @@
   border-bottom: solid 2px var(--cards-back);
 }
 
-.cards-type_menu ul {
+.dropdown-button {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 250px;
+  border-radius: 5px;
+  background: var(--white);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+
+  transform: translateY(20px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--cards-back);
+  color: var(--white);
+}
+
+/* .cards-type_menu ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -44,18 +85,16 @@
 .cards-type_menu ul a {
   text-decoration: none;
   color: gray;
-}
-
-#cards-all.active {
-  color: white;
-}
+} */
 
 .cards-container {
   margin: 40px 30px 0 30px;
   gap: 32px;
   display: grid;
-  grid-template-columns: 23% 23% 23% 23%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: repeat(4, minmax(200px, 23%));
+  /* grid-template-columns: 23% 23% 23% 23%; */
+  grid-template-rows: repeat(4, minmax(200px, 20%));
+  /* grid-template-rows: 20% 20% 20% 20%; */
   justify-items: center;
 }
 
@@ -63,13 +102,23 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: var(--cards-back);
   border-radius: 10px;
   margin-bottom: 40px;
+}
+
+.character_card img {
+  object-fit: contain;
+}
+
+.pokemon-image {
+  width: 200px;
+  height: 200px;
 }
 
 .card-name {
@@ -92,16 +141,6 @@ div.card-name {
   align-items: center;
 }
 
-.character-img {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 254px;
-  height: 241px;
-  border-radius: 10px;
-  background-color: white;
-}
-
 .character-img img {
   object-fit: contain;
 }
@@ -110,20 +149,20 @@ div.card-name {
   font-weight: 600;
 }
 
-.character_card button {
+.buy-button {
   width: 90px;
   height: 40px;
   background-color: var(--main-color);
   color: var(--white);
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 
 .more-cards {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 43%;
   padding: 100px 50px 75px 30px;
 }
@@ -135,6 +174,7 @@ div.card-name {
   border-radius: 5px;
   width: 150px;
   height: 40px;
+  cursor: pointer;
 }
 
 .more-cards p {

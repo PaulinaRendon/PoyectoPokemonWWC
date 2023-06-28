@@ -18,6 +18,11 @@
   --lg: 18px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .header-nav {
   background-color: var(--main-color);
   height: 10vh;
@@ -77,6 +82,12 @@
 main.active {
   background-color: var(--black);
 }
+
+/* footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+} */
 
 .footer-info {
   display: flex;

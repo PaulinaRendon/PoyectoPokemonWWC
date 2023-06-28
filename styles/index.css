@@ -1,6 +1,6 @@
 .home-page {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .home_info-links {
@@ -15,7 +15,6 @@
 
 .home-page__links {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 50px;
 }
@@ -29,12 +28,12 @@
   color: var(--black);
 }
 
-.home-page__links li:nth-child(2) {
+/* .home-page__links li:nth-child(2) {
   margin-right: 170px;
-}
+} */
 
 .home-image__container {
-  margin: 150px 30px 50px 80px;
+  margin: 5%;
 }
 
 .home-page__image {
