@@ -28,10 +28,6 @@
   color: var(--black);
 }
 
-/* .home-page__links li:nth-child(2) {
-  margin-right: 170px;
-} */
-
 .home-image__container {
   margin: 5%;
 }
@@ -39,10 +35,6 @@
 .home-page__image {
   width: 638px;
   height: 508px;
-}
-
-#home-page__info.active {
-  color: white;
 }
 
 .home-link_buttons {
@@ -57,6 +49,20 @@
   border-radius: 5px;
   font-size: var(--md);
   cursor: pointer;
+}
+
+/* Dark mode */
+
+.dark-main {
+  background-color: var(--black);
+}
+
+.homepage-info_dark p {
+  color: var(--white);
+}
+
+.homepage-info_dark h1 {
+  color: var(--white);
 }
 
 @media (max-width: 820px) {

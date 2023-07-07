@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/buyCards.css" />
-    <link rel="stylesheet" href="./styles/hader-fotter.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -37,88 +37,25 @@
       </nav>
     </header>
 
-    <main id="main">
-      <div class="cards-title">
-        <h1 id="cards-title_dark">Checkout Out Pokemon Cards</h1>
+    <main id="main" class="dark-main">
+      <div id="cards-title" class="cards-title_dark">
+        <h1>Checkout Out Pokemon Cards</h1>
         <p>
           The Pokemon Go expansion for the Pokemon Trading Card Game will
           release soon.
         </p>
       </div>
 
-      <div class="cards-type_menu">
-        <!--  <ul>
-          <li><button onclick="pokemonType()">Normal</button></li>
-          <li><button>Fire</button></li>
-          <li><button>Water</button></li>
-          <li><button>Grass</button></li>
-          <li><button>Flying</button></li>
-          <li><button>Fighting</button></li>
-          <li><button>Poison</button></li>
-          <li><button>Electric</button></li>
-          <li><button>Ground</button></li>
-          <li><button>Rock</button></li>
-          <li><button>Psychic</button></li>
-          <li><button>Ice</button></li>
-          <li><button>Bug</button></li>
-          <li><button>Ghost</button></li>
-          <li><button>Steel</button></li>
-          <li><button>Dragon</button></li>
-          <li><button>Dark</button></li>
-          <li><button>Fairy</button></li>
-        </ul> -->
-        <button onclick="toggleDropdown()" class="dropdown-button">
-          Select pokemon type
-          <i class="bx bx-chevron-down" id="arrow"></i>
-        </button>
-        <div class="dropdown-menu">
-          <a href="">All</a>
-          <a href="">Normal</a>
-          <a href="">Fire</a>
-          <a href="">Water</a>
-          <a href="">Grass</a>
-          <a href="">Flying</a>
-          <a href="">Fighting</a>
-          <a href="">Poison</a>
-          <a href="">Electric</a>
-          <a href="">Ground</a>
-          <a href="">Rock</a>
-          <a href="">Psychic</a>
-          <a href="">Ice</a>
-          <a href="">Bug</a>
-          <a href="">Ghost</a>
-          <a href="">Steel</a>
-          <a href="">Dragon</a>
-          <a href="">Dark</a>
-          <a href="">Fairy</a>
-        </div>
-      </div>
+      <select id="pokemon-types" name="types" class="dropdown-menu">
+        <option value="All">Select pokemon type</option>
+      </select>
 
-      <section class="cards-container">
-        <!-- <div class="character_card">
-          <div class="card-name">
-            <p>Name</p>
-            <img src="./assets/heart.png" alt="Like" />
-          </div>
-          <div class="character-img">
-            <img
-              class="pokemon-pic"
-              src="./assets/charmander.png"
-              alt="Charmander"
-            />
-          </div>
-          <div class="card-action">
-            <p>Power level</p>
-            <button class="buy-button">Buy</button>
-          </div>
-        </div> -->
-      </section>
+      <section class="cards-container"></section>
 
       <div class="more-cards">
         <button onclick="onLoadMore()" class="more-cards_button">
           Show more cards
         </button>
-        <!-- <p>120 cards</p> -->
       </div>
     </main>
 
@@ -185,6 +122,12 @@
         </div>
       </div>
     </footer>
-    <script src="index.js"></script>
+
+    <div id="pokemon-modal" class="modal">
+      <div class="modal-content">
+        <span class="close"> &times;</span>
+      </div>
+    </div>
+    <script src="buyCards.js"></script>
   </body>
 </html>

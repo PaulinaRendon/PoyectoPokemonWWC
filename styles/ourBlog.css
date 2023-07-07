@@ -49,6 +49,24 @@
   height: 528px;
 }
 
+/* Dark mode */
+
+.dark-main {
+  background-color: var(--black);
+}
+
+.blog-title_dark h1 {
+  color: var(--white);
+}
+
+.blog-title_dark p {
+  color: var(--white);
+}
+
+.blog-text_dark article {
+  color: var(--white);
+}
+
 @media (max-width: 820px) {
   section.blog-title {
     width: 90vw;

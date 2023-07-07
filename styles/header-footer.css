@@ -74,20 +74,10 @@ body {
   cursor: pointer;
 }
 
-#darkMode-button.active {
+.darkMode-active {
   background-color: var(--black);
   color: var(--white);
 }
-
-main.active {
-  background-color: var(--black);
-}
-
-/* footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-} */
 
 .footer-info {
   display: flex;

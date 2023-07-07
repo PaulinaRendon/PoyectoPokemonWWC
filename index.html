@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/hader-fotter.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
     <title>Pokemon</title>
   </head>
 
@@ -28,15 +28,17 @@
             <li><a href="./buyCards.html">BuyCards</a></li>
             <li><a href="./ourBlog.html">Our Blog</a></li>
           </ul>
-          <button id="darkMode-button">Dark Mode</button>
+          <button id="darkMode-button" class="darkMode-active">
+            Dark Mode
+          </button>
         </div>
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" class="dark-main">
       <section class="home-page">
         <div class="home_info-links">
-          <article id="home-page__info">
+          <article id="home-page__info" class="homepage-info_dark">
             <p>Discover the treasures awaiting for you...</p>
             <h1>POKEMON ACTION FIGURES, TOYS AND CARDS</h1>
             <p>
@@ -50,10 +52,10 @@
           </article>
 
           <ul class="home-page__links">
-            <li class="home-link_buttons">
+            <li class="home-link_buttons" class="homelink-buttons_dark">
               <a href="./ourBlog.html">Go to our blog</a>
             </li>
-            <li class="home-link_buttons">
+            <li class="home-link_buttons" class="homelink-buttons_dark">
               <a href="./buyCards.html">Buy cards</a>
             </li>
           </ul>
@@ -131,6 +133,6 @@
         </div>
       </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="darkModeIndex.js"></script>
   </body>
 </html>
